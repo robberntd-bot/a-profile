@@ -6,15 +6,17 @@ titles.forEach(title=>{
 setInterval(()=>{
 
 const sparkle=document.createElement('span')
-sparkle.innerHTML='✨'
-sparkle.style.position='absolute'
+sparkle.classList.add('sparkle')
+sparkle.innerHTML='✦'
+
 sparkle.style.left=Math.random()*100+'%'
-sparkle.style.animation='sparkle 1.5s linear infinite'
 
 title.appendChild(sparkle)
 
-setTimeout(()=>{sparkle.remove()},1500)
+setTimeout(()=>{
+sparkle.remove()
+},1200)
 
-},500)
+},900)
 
 })

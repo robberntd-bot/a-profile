@@ -11,7 +11,7 @@ body{
 margin:0;
 font-family:'Prompt',sans-serif;
 background:linear-gradient(180deg,var(--yellow),#ffffff);
-overflow-x:hidden;
+color:#333;
 }
 
 nav{
@@ -19,9 +19,8 @@ background:var(--pink);
 padding:15px;
 display:flex;
 justify-content:center;
-gap:30px;
-font-family:'Mali';
-font-size:18px;
+gap:28px;
+font-family:'Mali',cursive;
 box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
@@ -29,91 +28,262 @@ nav a{
 text-decoration:none;
 color:#333;
 font-weight:600;
-transition:0.3s;
+transition:0.2s;
 }
 
 nav a:hover{
-transform:scale(1.1);
+transform:scale(1.08);
 }
 
-.hero{
-text-align:center;
-padding:80px 20px;
-}
-
-.hero h1{
-font-family:'Mali';
-font-size:40px;
-}
-
-.hero button{
-background:var(--blue);
-border:none;
-padding:12px 30px;
-border-radius:25px;
-cursor:pointer;
-}
-
-.profile{
-background:var(--green);
-margin:40px auto;
-padding:40px;
-width:80%;
-border-radius:30px;
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:40px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.profile img{
-width:180px;
-height:180px;
-border-radius:35px;
-object-fit:cover;
-border:6px solid white;
-}
-
-.section{
-padding:70px 10%;
+.container{
+padding:60px 10%;
 text-align:center;
 }
 
-.section h2{
-font-family:'Mali';
-font-size:32px;
-margin-bottom:40px;
+h1,h2{
+font-family:'Mali',cursive;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
+margin-top:35px;
 }
 
 .card{
 background:white;
 border-radius:25px;
-padding:25px;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
-transition:0.3s;
+padding:20px;
+box-shadow:0 5px 12px rgba(0,0,0,0.1);
+transition:0.25s;
 }
 
 .card:hover{
-transform:translateY(-8px) scale(1.03);
+transform:translateY(-6px) scale(1.03);
 }
 
 .card img{
 width:100%;
-border-radius:20px;
+border-radius:18px;
 }
 
-button{
-background:var(--blue);
-border:none;
-padding:10px 20px;
-border-radius:20px;
-margin-top:10px;
+.profile-box{
+background:var(--green);
+padding:40px;
+border-radius:28px;
+display:flex;
+flex-wrap:wrap;
+gap:35px;
+align-items:center;
+justify-content:center;
+}
+
+.profile-box img{
+width:180px;
+height:180px;
+border-radius:35px;
+object-fit:cover;
+border:6px solid white;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.sparkle-title{
+position:relative;
+display:inline-block;
+}
+
+.sparkle{
+position:absolute;
+font-size:15px;
+color:#FFD700;
+pointer-events:none;
+text-shadow:
+0 0 6px #FFD700,
+0 0 10px #FFE27A,
+0 0 18px #FFF2A6;
+animation:sparkle 1.2s ease-out;
+}
+
+@keyframes sparkle{
+0%{opacity:0;transform:translateY(0) scale(0.4)}
+50%{opacity:1;transform:translateY(-6px) scale(1)}
+100%{opacity:0;transform:translateY(-12px) scale(0.4)}
+}
+
+footer{
+background:var(--purple);
+padding:22px;
+text-align:center;
+margin-top:60px;
+font-family:'Mali',cursive;
+}
+.social-icons{
+
+margin-top:50px;
+display:flex;
+justify-content:center;
+gap:25px;
+
+}
+
+.social-icons a{
+
+font-size:28px;
+color:#555;
+background:white;
+padding:12px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+transition:0.3s;
+
+}
+
+.social-icons a:hover{
+
+transform:scale(1.15);
+
+}
+
+/* สีไอคอน */
+
+.fa-facebook{
+color:#1877F2;
+}
+
+.fa-line{
+color:#06C755;
+}
+
+.fa-youtube{
+color:#FF0000;
+}
+/* HEADER */
+
+.navbar{
+
+background:#FFB6DA;
+
+padding:15px 20px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+position:relative;
+z-index:1001;
+
+}
+
+.site-title{
+
+font-family:'Mali', cursive;
+font-size:22px;
+margin:0;
+
+}
+
+/* MENU BUTTON */
+
+.menu-btn{
+
+font-size:28px;
 cursor:pointer;
+
+}
+
+/* OVERLAY */
+
+.overlay{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.3);
+
+opacity:0;
+visibility:hidden;
+
+transition:0.3s;
+
+z-index:999;
+
+}
+
+.overlay.show{
+
+opacity:1;
+visibility:visible;
+
+}
+
+/* SIDE MENU */
+
+.side-menu{
+
+position:fixed;
+
+top:0;
+right:-260px;
+
+width:260px;
+height:100%;
+
+background:white;
+
+box-shadow:-4px 0 12px rgba(0,0,0,0.15);
+
+padding-top:90px;
+
+transition:0.35s;
+
+display:flex;
+flex-direction:column;
+gap:15px;
+align-items:center;
+
+z-index:1000;
+
+}
+
+.side-menu.open{
+
+right:0;
+
+}
+
+/* MENU LINKS */
+
+.side-menu a{
+
+text-decoration:none;
+
+background:#D4F0DE;
+
+padding:12px 20px;
+
+border-radius:22px;
+
+width:80%;
+text-align:center;
+
+font-family:'Prompt';
+
+color:#333;
+
+transition:0.25s;
+
+}
+
+.side-menu a:hover{
+
+transform:scale(1.05);
+
 }
