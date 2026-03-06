@@ -1,0 +1,119 @@
+
+:root{
+--pink:#FFB6DA;
+--yellow:#FCEFB0;
+--green:#D4F0DE;
+--blue:#CCE4F6;
+--purple:#EBCFF8;
+}
+
+body{
+margin:0;
+font-family:'Prompt',sans-serif;
+background:linear-gradient(180deg,var(--yellow),#ffffff);
+overflow-x:hidden;
+}
+
+nav{
+background:var(--pink);
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+font-family:'Mali';
+font-size:18px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+transform:scale(1.1);
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-family:'Mali';
+font-size:40px;
+}
+
+.hero button{
+background:var(--blue);
+border:none;
+padding:12px 30px;
+border-radius:25px;
+cursor:pointer;
+}
+
+.profile{
+background:var(--green);
+margin:40px auto;
+padding:40px;
+width:80%;
+border-radius:30px;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile img{
+width:180px;
+height:180px;
+border-radius:35px;
+object-fit:cover;
+border:6px solid white;
+}
+
+.section{
+padding:70px 10%;
+text-align:center;
+}
+
+.section h2{
+font-family:'Mali';
+font-size:32px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:25px;
+padding:25px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.03);
+}
+
+.card img{
+width:100%;
+border-radius:20px;
+}
+
+button{
+background:var(--blue);
+border:none;
+padding:10px 20px;
+border-radius:20px;
+margin-top:10px;
+cursor:pointer;
+}
